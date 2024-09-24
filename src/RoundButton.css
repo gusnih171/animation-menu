@@ -1,0 +1,21 @@
+.round-button {
+    border-radius: 60%;
+    width: 50px; 
+    height: 50px; 
+    background-image: url('./component/Github.png');
+    background-size: cover;
+    border-color: black; 
+    cursor: pointer;
+    position: fixed;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+.round-button:hover {
+    background-image: url('./component/GithubPink.jpg');
+    border-color: #ff69b4;;
+    
+}
+

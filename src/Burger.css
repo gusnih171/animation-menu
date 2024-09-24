@@ -1,0 +1,89 @@
+.burger-wrapper {
+  cursor: pointer;
+}
+#menu {
+    background-color: rgba(255, 105, 180, 0.5);
+    width: 30%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    transition-timing-function: cubic-bezier(10,2,3,1);
+    transform: translateX(100%);
+    top: 0;
+    z-index: 0;
+    transition: 0.5s;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#menuPinkie {
+    display: none;
+}
+
+#menuPinkie:checked ~ #menu {
+    transform: translateX(0);
+}
+
+#burger {
+    position: absolute;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    right: 1rem;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#burger > div {
+    height: 2px;
+    background-color: #ff69b4;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+#menuPinkie:checked ~ #burger > div {
+  background-color: #fff;
+}
+
+#menuPinkie:checked ~ #burger > div:nth-child(1) {
+    transform: translateY(15px) rotate(45deg);
+}
+#menuPinkie:checked ~ #burger > div:nth-child(2) {
+    opacity: 0;
+}
+#menuPinkie:checked ~ #burger > div:nth-child(3) {
+    transform: translateY(-15px) rotate(-45deg);
+}
+#menu ul {
+          list-style: none;
+          padding: 0 1em;
+          margin: 0;
+          display: block;
+          max-height: 100vh;
+}
+#menu ul li {
+            padding: 0;
+            margin: 1em;
+            font-size: 24px;
+            display: block;
+}
+#menu ul li a {
+    color: white;
+    text-align: center;
+    z-index: 1;
+    font-family: 'Cinzel Decorative', serif;
+    text-decoration: solid;
+    list-style:none;
+    font-weight:bold;
+    color:#fff;
+    font-size: 70px;
+    display: inline-block;
+    text-shadow: 2px 2px 4px #ff69b4;
+    padding: 10px;
+    opacity: 1;
+}
+
+#menu ul li a:hover {
+    text-decoration: underline;
+}
